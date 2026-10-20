@@ -41,3 +41,10 @@ body.pix-modal-open{overflow:hidden}
  .pix-modal{padding:12px}
 }
 @media(prefers-reduced-motion:reduce){.pix-spinner{animation:none}}
+
+/* Identidade visual exibida separadamente do indicador de conexão segura. */
+.secure-footer{height:auto;min-height:105px;flex-direction:column;gap:9px;padding:20px 8px}
+.secure-footer-line{display:flex;gap:6px;align-items:center;justify-content:center}
+.footer-brand-reference{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;color:#7a7773;font-size:10px;text-align:center}
+.footer-brand-reference img{display:block;width:71px;height:20px;object-fit:contain}
+@media(max-width:600px){.secure-footer{min-height:94px;padding:17px 8px}.footer-brand-reference{font-size:9px}}
