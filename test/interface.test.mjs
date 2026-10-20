@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import {readFileSync} from 'node:fs';
+test('Pix reveals payment controls and hides the code on completion',()=>{
+  const elements = new Map();
+  const get = id => {if(!elements.has(id)) elements.set(id,{hidden:true,disabled:false,value:'',textContent:'',addEventListener(){},replaceChildren(...children){this.children=children;}});return elements.get(id);};
+  const context = vm.createContext({document:{getElementById:get,querySelector:get,createElement:()=>({})},sessionStorage:{getItem:()=>null,setItem(){},removeItem(){}},crypto:{randomUUID:()=> 'test'},Date,URLSearchParams,clearTimeout(){},setTimeout(){},fetch:async()=>({ok:true,json:async()=>({status:'PENDING'})})});
+  vm.runInContext(readFileSync(new URL('../public/app.js',import.meta.url),'utf8'),context);
+  vm.runInContext(`showPayment({code:'test-code',token:'test-token',image:'data:image/png;base64,test',expiresAt:'2099-01-01'});`,context);
+  assert.equal(get('qr-area').hidden,false);
+  assert.equal(get('copy').hidden,false);
+  assert.equal(get('copy').disabled,false);
+  assert.equal(get('pix-code').value,'test-code');
+  assert.equal(get('customer-fields').disabled,true);
+  vm.runInContext(`finish('PAID')`,context);
+  assert.equal(get('qr-area').hidden,true);
+  assert.equal(get('copy').disabled,true);
+  assert.match(get('status').textContent,/Pagamento confirmado/);
+});

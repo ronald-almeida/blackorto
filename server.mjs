@@ -43,7 +43,7 @@ export const server=http.createServer(async(req,res)=>{
       return json(res,404,{error:'Não encontrado.'});
     }
     if(req.method!=='GET'&&req.method!=='HEAD')return json(res,405,{error:'Método não permitido.'});
-    const files={'/':'index.html','/styles.css':'styles.css','/reference.css':'reference.css','/app.js':'app.js','/assets/blackorto-logo.webp':'assets/blackorto-logo.webp','/assets/qrcode.svg':'assets/qrcode.svg'};
+    const files={'/':'index.html','/styles.css':'styles.css','/reference.css':'reference.css','/app.js':'app.js','/assets/blackorto-logo.webp':'assets/blackorto-logo.webp','/assets/qrcode.svg':'assets/qrcode.svg','/assets/blackorto-product.png':'assets/blackorto-product.png'};
     const file=files[url.pathname];if(!file)return json(res,404,{error:'Página não encontrada.'});
     const content=await readFile(new URL(file,publicDir));const extension=file.slice(file.lastIndexOf('.'));res.writeHead(200,{'Content-Type':mime[extension],'Cache-Control':file.startsWith('assets/')?'public, max-age=86400':'no-cache'});res.end(req.method==='HEAD'?undefined:content);
   }catch{json(res,500,{error:'Não foi possível concluir. Tente novamente mais tarde.'});}

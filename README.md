@@ -20,7 +20,7 @@ A interface coleta nome, e-mail, confirmação de e-mail, celular e CPF/CNPJ. O 
 
 `BLACKCAT_POSTBACK_URL` é opcional e pode apontar para um sistema de entrega/acesso de curso. Esse serviço deve consultar o status diretamente na Black Cat antes de liberar o produto. O checkout **não implementa o disparo de e-mail nem a entrega automática do curso**.
 
-A fonte pedida consta no CSS como `"Hotmart Display","Times New Roman",Times,serif`. Sem um arquivo licenciado da Hotmart Display, o sistema operacional utiliza o fallback.
+A interface usa fontes do sistema, resumo lateral no desktop e layout compacto no celular. A imagem do produto está em `public/assets/blackorto-product.png`. O QR Code e o botão de copiar são exibidos somente após a geração do Pix.
 
 ## Publicar na Vercel
 
