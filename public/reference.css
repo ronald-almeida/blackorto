@@ -1,0 +1,59 @@
+/* Proporções da referência com o banner superior removido. */
+:root{background:#fff;color:#101010}
+body{padding:24px 16px 40px}
+.checkout{max-width:900px;border:0;border-radius:0;box-shadow:none;overflow:visible;background:transparent}
+
+.content{max-width:738px;margin:0 auto 0;border:1px solid #cecac5;border-radius:19px;padding:10px 18px 0;background:#fff}
+.country{height:24px;align-items:center;font-size:10px;color:#101010}
+.country span{font-size:12px;color:#101010}
+.product{gap:17px;margin:4px 0 38px;align-items:flex-start}
+.product>div{min-width:0}
+.product img{width:140px;height:100px;flex:0 0 140px;border-radius:4px;object-fit:contain}
+.checkout .product h1{font-family:"Hotmart Display","Times New Roman",Times,serif;font-size:18px;font-weight:700;line-height:1.25;margin:0 0 5px;letter-spacing:-.4px}
+.author{font-size:13px;margin:0 0 3px}
+.price{display:block;font-size:20px;line-height:1.3}
+.payment-caption{font-size:13px}
+.tag{font-size:12px;letter-spacing:0;color:#101010;margin-top:12px}
+legend,h2{font-size:18px;line-height:1.4;margin-bottom:12px}
+label{font-size:15px;margin-bottom:9px}
+input{height:44px;font-size:14px;margin-bottom:13px;padding:0 13px;border-radius:6px}
+.row{grid-template-columns:1fr 1fr;gap:13px}
+.phone{height:44px;border-radius:6px}
+.phone span{font-size:13px;padding:0 14px}
+.phone input{height:42px}
+.payment{margin-top:24px}
+.pix-card{border-radius:9px}
+.pix-heading{height:59px;padding:16px 18px;font-size:15px;gap:11px}
+.pix-heading svg{width:24px;height:24px}
+.radio{width:17px;height:17px}.radio:after{inset:3px}
+.instant{display:none}
+.pix-body{min-height:273px;padding:26px 18px;grid-template-columns:minmax(0,382fr) minmax(0,262fr);gap:18px;background:#f5f4f1}
+.pix-actions{align-self:start;padding-top:12px}
+.pix-actions p{font-size:13px;line-height:1.4;margin:0 16px 30px;gap:10px}
+.check{font-size:24px;line-height:1.2;font-weight:300}
+button{height:40px;min-height:40px;font-size:18px;padding:7px 10px;background:#00b637;border-radius:6px}
+#generate{display:flex;align-items:center;justify-content:center;gap:9px}
+#generate img{filter:brightness(0) invert(1);width:20px;height:23px}
+.secondary{margin-top:0;font-size:18px;height:40px;color:#008d2d}
+.secondary:disabled{opacity:1;cursor:not-allowed}
+.qr-area{display:flex;justify-content:center;align-items:center}
+.qr-area img{width:180px;height:206px;background:transparent;object-fit:contain}
+.qr-area img:not(.qr-placeholder){height:180px;background:#fff}
+.details{margin-top:27px}
+.details h2{margin-left:4px;margin-bottom:28px}
+.details>div{min-height:43px;padding:9px;font-size:14px;border-radius:4px}
+.details>div>span{font-weight:700}
+.details strong{font-size:14px;font-weight:400}
+footer{height:112px;margin:0;font-size:11px;gap:5px;color:#7a7773}
+footer strong{font-size:14px}
+footer .footer-logo{width:71px;height:20px;object-fit:contain}
+#payment-result{padding:0 18px 18px}
+@media(max-width:600px){
+ body{padding:16px 12px 24px}.content{margin-top:24px;padding:10px 12px 0;border-radius:15px}
+ .product{gap:12px;margin-bottom:30px}.product img{width:116px;height:88px;flex-basis:116px;object-fit:contain}.checkout .product h1{font-size:16px}.author,.payment-caption,.tag{font-size:11px}.price{font-size:18px}
+ legend,h2{font-size:16px}label,input{font-size:12px}.row{gap:10px}.phone span{font-size:10px;padding:0 7px}.phone input{padding:0 8px}.phone{margin-bottom:0}
+ .pix-heading{height:45px;font-size:13px;padding:12px}.pix-body{padding:20px 13px;min-height:200px;grid-template-columns:minmax(0,1fr) 130px;gap:18px}
+ .pix-actions{padding-top:5px}.pix-actions p{margin:0 8px 22px;font-size:10px;gap:6px}.check{font-size:19px}button,.secondary{font-size:13px;height:33px;min-height:33px}
+ .qr-area img{width:126px;height:144px}.qr-area img:not(.qr-placeholder){height:126px}.details h2{margin-bottom:18px}.details>div,.details strong{font-size:11px}footer{height:88px;font-size:9px}footer strong{font-size:12px}
+}
+@media(max-width:380px){.row{grid-template-columns:1fr}.pix-body{grid-template-columns:minmax(0,1fr) 90px;gap:10px}.qr-area img{width:90px;height:103px}.qr-area img:not(.qr-placeholder){height:90px}button,.secondary{font-size:11px}.details>div{gap:8px}}
