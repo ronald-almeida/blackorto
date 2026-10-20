@@ -57,3 +57,6 @@ footer .footer-logo{width:71px;height:20px;object-fit:contain}
  .qr-area img{width:126px;height:144px}.qr-area img:not(.qr-placeholder){height:126px}.details h2{margin-bottom:18px}.details>div,.details strong{font-size:11px}footer{height:88px;font-size:9px}footer strong{font-size:12px}
 }
 @media(max-width:380px){.row{grid-template-columns:1fr}.pix-body{grid-template-columns:minmax(0,1fr) 90px;gap:10px}.qr-area img{width:90px;height:103px}.qr-area img:not(.qr-placeholder){height:90px}button,.secondary{font-size:11px}.details>div{gap:8px}}
+
+/* Mobile iOS input focus should not trigger Safari automatic zoom. */
+@media(max-width:767px){input:not([type="hidden"]),textarea,select{font-size:16px!important}}

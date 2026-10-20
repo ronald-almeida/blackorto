@@ -4,7 +4,7 @@
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Big Black Orto Vitalicia 2026 | Finalize sua compra</title>
   <meta name="description" content="Finalize a compra do Big Black Orto Vitalicia 2026 por R$ 497,70 via Pix.">
-  <link rel="stylesheet" href="/styles.css?v=3"><link rel="stylesheet" href="/reference.css?v=1"><script src="/app.js" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=4"><link rel="stylesheet" href="/reference.css?v=2"><script src="/app.js?v=4" defer></script>
 </head>
 <body>
 <main class="checkout">
@@ -24,13 +24,38 @@
       </fieldset>
       <section class="payment"><h2>Escolha a forma de pagamento</h2><div class="pix-card">
         <div class="pix-heading"><span class="radio"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 1 5 5-5 5-5-5Zm0 12 5 5-5 5-5-5ZM1 12l5-5 5 5-5 5Zm12 0 5-5 5 5-5 5Z"/></svg><strong>Pix</strong><span class="instant">Aprovação rápida</span></div>
-        <div class="pix-body"><div class="pix-actions"><p id="instructions"><span class="check">✓</span> Após o pagamento, a confirmação do Pix aparecerá nesta página.</p><button id="generate" type="submit"><img src="/assets/qrcode.svg" alt="" width="20" height="23"> Gerar código QR</button><button id="copy" class="secondary" type="button" disabled>Copiar código Pix</button></div>
-        <div class="qr-area" id="qr-area"><img class="qr-placeholder" src="/assets/qrcode.svg" alt="Ilustração de QR Code; gere seu código para pagar" width="180" height="206"></div></div>
-        <div id="payment-result" hidden><p id="status" role="status" aria-live="polite"></p><label for="pix-code">Pix copia e cola</label><textarea id="pix-code" readonly rows="3"></textarea><p id="expiry"></p></div>
+        <div class="pix-body pix-body-compact">
+          <div class="pix-actions"><p id="instructions"><span class="check">✓</span> Pagamento rápido via Pix. Clique no botão abaixo para gerar seu QR Code.</p>
+            <button id="generate" type="submit"><img src="/assets/qrcode.svg" alt="" width="20" height="23"> Gerar Pix de R$ 497,70</button>
+          </div>
+        </div>
       </div><p id="error" role="alert" hidden></p></section>
     </form>
     <section class="details"><h2>Detalhes da compra</h2><div><span>Big Black Orto Vitalicia 2026</span><strong>R$ 497,70</strong></div></section>
-    <footer><span>Pagamento via Pix • Transação processada pela Black Cat</span></footer>
+    <footer class="secure-footer"><span>Protegido por</span><span class="secure-indicator"><svg class="secure-lock" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> conexão segura HTTPS</span></footer>
   </div>
 </main>
+<div id="pix-modal" class="pix-modal" hidden>
+  <div class="pix-modal-backdrop" id="modal-backdrop"></div>
+  <section class="pix-dialog" role="dialog" aria-modal="true" aria-labelledby="pix-title" aria-describedby="pix-subtitle" tabindex="-1">
+    <header class="pix-dialog-header">
+      <div><p class="pix-eyebrow">PAGAMENTO VIA PIX</p><h2 id="pix-title">Finalize seu pagamento</h2>
+        <p id="pix-subtitle">Total a pagar: <strong>R$ 497,70</strong></p></div>
+      <button type="button" class="pix-close" id="close-modal" aria-label="Fechar janela de pagamento">×</button>
+    </header>
+    <div class="pix-dialog-body">
+      <p id="status" class="pix-modal-status" role="status" aria-live="polite">Preparando pagamento…</p>
+      <div id="pix-loading" class="pix-loading" role="status"><span class="pix-spinner" aria-hidden="true"></span> Gerando seu Pix com segurança…</div>
+      <div id="payment-result" hidden>
+        <div class="modal-qr" id="qr-area"></div>
+        <label for="pix-code">Código Pix copia e cola</label>
+        <textarea id="pix-code" readonly rows="3" spellcheck="false" aria-label="Código Pix copia e cola"></textarea>
+        <button id="copy" class="pix-copy" type="button" disabled>Copiar código Pix</button>
+        <p id="expiry"></p>
+      </div>
+      <p id="modal-error" class="pix-modal-error" role="alert" hidden></p>
+      <p class="pix-modal-note">Confira o valor no aplicativo do seu banco antes de confirmar o pagamento.</p>
+    </div>
+  </section>
+</div>
 </body></html>

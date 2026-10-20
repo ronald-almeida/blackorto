@@ -1,1 +1,43 @@
 :root{font-family:"Hotmart Display","Times New Roman",Times,serif;color:#202024;background:#f7f7f7;font-synthesis:none}*{box-sizing:border-box}body{margin:0;padding:24px 16px 40px}.checkout{max-width:680px;margin:auto;background:white;border:1px solid #d7d3d0;border-radius:14px;overflow:hidden;box-shadow:0 4px 20px #00000005}.content{padding:14px 26px 20px}.country{display:flex;justify-content:flex-end;gap:6px;font-size:10px;font-weight:700;color:#315e4c}.country span{color:#59595c;font-weight:400}.product{display:flex;gap:16px;margin:15px 0 32px}.product img{width:88px;height:88px;border-radius:5px;object-fit:contain}h1{font-size:17px;margin:0 0 4px;font-weight:700;line-height:1.4}.author{font-size:11px;margin:0 0 5px}.price{font-size:21px;line-height:1.4}.payment-caption{font-size:12px;margin:0}.tag{display:inline-block;font-size:9px;letter-spacing:.45px;color:#67526b;margin-top:8px}fieldset{border:0;padding:0;margin:0;min-width:0}legend,h2{font-size:16px;font-weight:700;margin:0 0 17px;padding:0}label{display:block;font-size:12px;margin-bottom:7px}input{font:400 12px "Hotmart Display","Times New Roman",Times,serif;width:100%;height:42px;border:1px solid #c8c4c0;border-radius:5px;background:#fff;padding:0 12px;margin:0 0 16px;color:#262329;min-width:0}input::placeholder{color:#86818b}input:focus,textarea:focus{outline:2px solid #9d298c;outline-offset:2px}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.phone{display:flex;border:1px solid #c8c4c0;border-radius:5px;height:42px}.phone span{font-size:11px;display:flex;align-items:center;padding:0 10px;border-right:1px solid #c8c4c0;white-space:nowrap}.phone input{border:0;margin:0;height:40px}.payment{margin-top:23px}.pix-card{border:1px solid #27272a;border-radius:6px;overflow:hidden}.pix-heading{display:flex;align-items:center;gap:9px;padding:15px;font-size:12px}.pix-heading svg{width:22px;height:22px;fill:#32b6ab}.radio{width:13px;height:13px;border:1px solid #aaa;border-radius:50%;position:relative}.radio:after{content:"";position:absolute;inset:2px;background:#18181b;border-radius:50%}.instant{margin-left:auto;font-size:10px;color:#6b6b6b}.pix-body{background:#f5f4f1;padding:24px 16px;display:grid;grid-template-columns:minmax(0,1fr) 150px;align-items:center;gap:26px}.pix-actions p{font-size:11px;line-height:1.6;margin:0 0 21px;display:flex;gap:9px}.check{font-size:19px;color:#82847c}button{font:700 13px "Hotmart Display","Times New Roman",Times,serif;width:100%;border:0;border-radius:5px;min-height:39px;padding:9px 12px;background:#08b83e;color:white;cursor:pointer}button:hover:not(:disabled){background:#079d36}button:focus-visible{outline:2px solid #9d298c;outline-offset:3px}button:disabled{cursor:not-allowed;opacity:.55}.secondary{background:transparent;border:1px solid #c8c4c0;color:#008b32;font-weight:400;margin-top:5px}.secondary:hover:not(:disabled){background:#e6f4e9}.qr-area{text-align:center;color:#c4c2bb}.qr-placeholder{width:126px;height:126px}.qr-area span{display:block;font-size:9px;margin-top:6px;color:#797870}.qr-area img{width:150px;height:150px;object-fit:contain;background:white}.details{margin-top:26px}.details>div{display:flex;justify-content:space-between;align-items:center;gap:15px;font-size:12px;padding:13px 10px;border:1px solid #d1ccc8;border-radius:4px}.details small{display:block;font-size:10px;color:#827b84;margin-top:3px}.details strong{white-space:nowrap;font-size:12px}.details .total{border:0;padding:16px 2px 0;font-weight:600}.total strong{font-size:17px}footer{display:flex;align-items:center;justify-content:center;gap:6px;color:#8c8a8d;font-size:10px;margin:30px 0 5px}footer svg{width:15px;height:15px}#error{font-size:12px;color:#a02335;background:#fff0f1;padding:12px;border-radius:5px}#payment-result{background:#f5f4f1;padding:0 16px 16px}#status{font-size:12px;font-weight:600;color:#377348;margin:0 0 12px}textarea{width:100%;resize:vertical;border:1px solid #cbc7c2;border-radius:4px;padding:8px;font:11px monospace;overflow-wrap:anywhere}#expiry{font-size:10px;margin-bottom:0;color:#65606a}[hidden]{display:none!important}@media(max-width:480px){body{padding:10px 10px 24px}.content{padding:13px 15px 18px}.product{gap:12px;margin-bottom:27px}.product img{width:74px;height:74px}h1{font-size:14px}.price{font-size:19px}.row{gap:10px;grid-template-columns:1fr}.phone{margin-bottom:12px}.pix-body{grid-template-columns:minmax(0,1fr) 106px;gap:12px;padding:20px 12px}.qr-placeholder{width:94px;height:94px}.qr-area img{width:106px;height:106px}.instant{font-size:9px}button{font-size:12px}.pix-actions p{font-size:10px}.details>div{font-size:11px}}@media(prefers-reduced-motion:no-preference){button{transition:background .15s}}
+
+
+/* Pix modal and accessible mobile form fields */
+.pix-body.pix-body-compact{display:flex;justify-content:center;align-items:center;min-height:145px;padding:24px;background:#f5f4f1}
+.pix-body-compact .pix-actions{width:100%;max-width:440px;padding:0}
+.pix-body-compact .pix-actions p{margin:0 0 18px;font-size:14px;line-height:1.5}
+.pix-body-compact #generate{width:100%;min-height:46px;height:auto;font-size:16px}
+.pix-modal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;isolation:isolate}
+.pix-modal-backdrop{position:absolute;inset:0;background:rgba(17,24,39,.73);backdrop-filter:blur(3px);z-index:-1}
+body.pix-modal-open{overflow:hidden}
+.pix-dialog{width:min(100%,460px);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain;border-radius:18px;background:#fff;color:#242424;padding:24px;box-shadow:0 24px 70px rgba(0,0,0,.3);font-family:"Hotmart Display","Times New Roman",Times,serif}
+.pix-dialog-header{display:flex;justify-content:space-between;align-items:start;gap:16px;border-bottom:1px solid #e7e7e7;padding-bottom:16px;margin-bottom:17px}
+.pix-dialog-header h2{font-size:23px;line-height:1.2;margin:4px 0 7px}
+.pix-dialog-header #pix-subtitle{font-size:15px;margin:0}
+.pix-eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;color:#777;margin:0}
+.pix-close{width:36px;min-width:36px;height:36px;min-height:36px;background:#f2f2f2;color:#444;border-radius:50%;font:400 26px Arial,sans-serif;padding:0}
+.pix-close:hover:not(:disabled){background:#e9e9e9}
+.pix-modal-status{font-size:15px;font-weight:700;text-align:center;color:#25734c;margin:0 0 16px}
+.pix-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:160px;text-align:center;font-size:15px;color:#5d5d5d}
+.pix-spinner{display:block;height:38px;width:38px;border-radius:50%;border:4px solid #e2e2e2;border-top-color:#00a739;animation:pix-spin .8s linear infinite}
+@keyframes pix-spin{to{transform:rotate(360deg)}}
+.modal-qr{display:flex;align-items:center;justify-content:center;min-height:160px;padding:4px 0 17px;font-size:13px;text-align:center;color:#555}
+.modal-qr img{display:block;width:clamp(155px,55vw,214px);height:auto;max-height:214px;object-fit:contain}
+.pix-dialog label{font-size:14px;margin:0 0 8px;display:block}
+.pix-dialog textarea{font:400 16px/1.35 ui-monospace,SFMono-Regular,Consolas,monospace;min-height:70px;resize:none;overflow-wrap:anywhere;background:#fbfbfb;margin:0 0 12px}
+.pix-dialog .pix-copy{font-size:16px;min-height:45px;height:auto;background:#00a83b;color:#fff}
+.pix-dialog #expiry{text-align:center;font-size:12px;color:#767676;margin:12px 0 0}
+.pix-modal-error{padding:12px;border-radius:8px;background:#fff1f1;color:#972c37;font-size:14px;line-height:1.5}
+.pix-modal-note{text-align:center;color:#737373;font-size:12px;line-height:1.5;margin:15px 0 0}
+.secure-footer{display:flex;gap:7px;align-items:center;justify-content:center;height:72px;color:#7a7773}
+.secure-indicator{display:flex;align-items:center;gap:5px;font-weight:600}
+.secure-lock{width:16px;height:16px;flex:none}
+@media(max-width:767px){
+ input:not([type="hidden"]),textarea,select{font-size:16px!important}
+ .pix-dialog{padding:18px 17px;border-radius:16px}
+ .pix-body.pix-body-compact{padding:20px 14px;min-height:120px}
+ .pix-body-compact .pix-actions p{font-size:13px;margin:0 0 14px}
+ .pix-body-compact #generate{font-size:16px;min-height:45px}
+ .pix-dialog-header h2{font-size:21px}
+ .pix-modal{padding:12px}
+}
+@media(prefers-reduced-motion:reduce){.pix-spinner{animation:none}}
